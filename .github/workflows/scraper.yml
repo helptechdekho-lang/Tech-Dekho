@@ -44,7 +44,7 @@ jobs:
               [[ "$url" =~ ^[[:space:]]*# ]] && continue
               [[ -z "$url" ]] && continue
               echo "Processing: $url"
-              python build_pipeline.py --url "$url"
+              python build_pipeline.py --sitemap "$url"
             done < urls.txt
           else
             echo "Error: No URL provided via manual trigger and urls.txt not found."
